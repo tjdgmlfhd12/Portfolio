@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="bg">
+            <div class="slide">
+                <!-- Swiper -->
+                <div class="swiper cardnews">
+                    <div class="swiper-wrapper">
+<!-- 카드뉴스1 -->
+                        <div class="swiper-slide">
+                            <img src="./img/card1.jpg" alt="cardnews">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/card2.jpg" alt="cardnews">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/card3.jpg" alt="cardnews">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/card4.jpg" alt="cardnews">
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".cardnews", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>
